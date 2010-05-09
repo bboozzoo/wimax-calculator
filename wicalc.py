@@ -2,6 +2,12 @@
 
 import math
 
+def s_to_ms(value_in_s):
+    return value_in_s * 1000.0
+
+def s_to_us(value_in_s):
+    return value_in_s * 1000000.0
+
 class OFDMError(Exception):
     def __init__(self, what):
         self.__what = what
@@ -11,9 +17,13 @@ class OFDMError(Exception):
 class OFDM:
     Nfft = 256
     Nused = 200
-
-    BW_3_5_MHz = 3500000
-    BW_7_MHz = 7000000
+    
+    BW_1_75_MHz = 1750000
+    BW_3_MHz =    3000000
+    BW_3_5_MHz =  3500000
+    BW_5_5_MHz =  5500000
+    BW_7_MHz =    7000000
+    BW_10_MHz =  10000000
 
     CP_1_4 = 1/4.0
     CP_1_8 = 1/8.0
@@ -21,7 +31,7 @@ class OFDM:
     CP_1_32 = 1/32.0
 
     __valid_cp = [CP_1_4, CP_1_8, CP_1_16, CP_1_32]
-    __valid_bw = [BW_3_5_MHz, BW_7_MHz]
+    __valid_bw = [BW_3_MHz, BW_3_5_MHz, BW_7_MHz]
 
     def __init__(self, bw, cp):
         self.__bw = bw 
