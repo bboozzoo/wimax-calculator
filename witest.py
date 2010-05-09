@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import wicalc
-o = wicalc.OFDM(wicalc.OFDM.BW_7_MHz, wicalc.OFDM.CP_1_16)
+from wimax import *
+o = OFDM(OFDM.BW_7_MHz, OFDM.CP_1_16)
 
 print o.get_n()
 print o.get_Fs()
