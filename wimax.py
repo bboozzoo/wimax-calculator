@@ -2,6 +2,12 @@
 
 import math
 
+FRAME_1_25_ms = 0.00125
+FRAME_2_5_ms = 0.0025
+FRAME_5ms = 0.005
+FRAME_10ms = 0.01
+FRAME_20ms = 0.02
+
 def s_to_ms(value_in_s):
     return value_in_s * 1000.0
 
