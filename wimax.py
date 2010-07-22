@@ -37,7 +37,7 @@ class OFDM:
     CP_1_32 = 1/32.0
 
     __valid_cp = [CP_1_4, CP_1_8, CP_1_16, CP_1_32]
-    __valid_bw = [BW_3_MHz, BW_3_5_MHz, BW_7_MHz]
+    __valid_bw = [BW_3_MHz, BW_3_5_MHz, BW_7_MHz, BW_10_MHz]
 
     def __init__(self, bw, cp):
         self.__bw = bw 
